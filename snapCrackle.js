@@ -1,22 +1,22 @@
 function snapCrackle(maxValue) {
-    let string = []
+    let script = []
     for (let i = 1; i <= maxValue; i++) {
-        if ((i % 2) !== 0) {
-            string.push("snap")
-        }
-        else if (( i % 5 == 0)) {
-            string.push("Crackle")
-        }
-        else if((i % 2 !== 0 && i % 5 == 0)){
-            string.push("SnapCrackle")
 
+        if (i % 2 !== 0 && i % 5 == 0) {
+            script.push("SnapCrackle")
         }
-        else{
-            string.push(i)
+        else if (i % 2 !== 0) {
+            script.push("Snap")
+        }
+        else if (i % 5 == 0) {
+            script.push("Crackle")
         }
 
-        
-    }
-    return string
+        else {
+            script.push(i)
+        }
+
+    } return script
+
 }
-console.log(snapCrackle ()) 
+console.log(snapCrackle())
